@@ -51,22 +51,34 @@
             </li>
         </ul>
 
+        {{-- offers --}}
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li
+                class="nav-item {{ areActiveRoutes(['admin.offers.index', 'admin.offers.create', 'admin.offers.edit']) }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.offers.index') }}"><i
+                        class="fa-solid fa-star"></i><span
+                        class="menu-title text-truncate">{{ __('models.offers') }}</span></a>
+            </li>
+        </ul>
+
         {{-- values --}}
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li
                 class="nav-item {{ areActiveRoutes(['admin.values.index', 'admin.values.create', 'admin.values.edit']) }}">
-                <a class="d-flex align-items-center" href="{{ route('admin.values.index') }}"><i class="fa-solid fa-arrow-up-from-water-pump"></i><span
+                <a class="d-flex align-items-center" href="{{ route('admin.values.index') }}"><i
+                        class="fa-solid fa-arrow-up-from-water-pump"></i><span
                         class="menu-title text-truncate">{{ __('models.values') }}</span></a>
             </li>
         </ul>
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-    <li class="nav-item {{ areActiveRoutes(['admin.vallages.index', 'admin.vallages.create', 'admin.vallages.edit']) }}">
-        <a class="d-flex align-items-center" href="{{ route('admin.vallages.index') }}">
-            <i class="fa-solid fa-arrow-up-from-water-pump"></i>
-            <span class="menu-title text-truncate">{{ __('models.values') }}</span>
-        </a>
-    </li>
-</ul>
+            <li
+                class="nav-item {{ areActiveRoutes(['admin.vallages.index', 'admin.vallages.create', 'admin.vallages.edit']) }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.vallages.index') }}">
+                    <i class="fa-solid fa-arrow-up-from-water-pump"></i>
+                    <span class="menu-title text-truncate">{{ __('models.values') }}</span>
+                </a>
+            </li>
+        </ul>
         {{-- solutions --}}
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li

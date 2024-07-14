@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\OfferController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -42,3 +43,6 @@ Route::namespace('Api')->group(function () {
     // Videos Routes
     Route::get('videos', 'VideoController@index');
 });
+
+
+Route::get('/notifications', [OfferController::class, 'getNotifications']);

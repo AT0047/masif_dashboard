@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\AuthController;
+use App\Http\Controllers\Dashboard\OfferController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -91,6 +92,17 @@ Route::middleware('localization')->group(function () {
 
         Route::get('profile', 'ProfileController@getProfile')->name('profile');
         Route::post('update-profile', 'ProfileController@updateProfile')->name('update_profile');
+
+
+        //-------------------- Offers ---------------------------
+        Route::prefix('offers')->as('offers.')->group(function (){
+            Route::get('/', [OfferController::class, 'index'])->name('index');
+            Route::get('/create', [OfferController::class, 'create'])->name('create');
+            Route::post('/store', [OfferController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [OfferController::class, 'edit'])->name('edit');
+            Route::patch('/update/{id}', [OfferController::class, 'update'])->name('update');
+            Route::delete('/destory/{id}', [OfferController::class, 'destroy'])->name('destroy');
+        });
     });
 
 
