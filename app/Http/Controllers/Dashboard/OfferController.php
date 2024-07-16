@@ -89,11 +89,18 @@ class OfferController extends Controller
     {
         $user = $request->user();
         $notifications = $user->notifications;
-
         if ($notifications->isEmpty()) {
             return response()->json(['message' => 'No notifications found'], 404);
         }
-
         return response()->json($notifications);
+        //don't forget to use => php artisan queue:work  
+        //to send a notification
+    }
+
+    public function markAsRead(Request $request)
+    {
+        $user = $request->user();
+        $user->unreadNotifications->markAsRead();
+        return response()->json(['message' => 'Notifications marked as read']);
     }
 }

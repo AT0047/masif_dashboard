@@ -146,3 +146,5 @@ Route::middleware('localization')->group(function () {
         Route::get('internships', 'JobController@internships')->name('internships.index');
     });
 });
+
+

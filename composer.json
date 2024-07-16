@@ -11,7 +11,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "jorenvanhocht/laravel-share": "^4.2",
         "laravel/framework": "^8.75",
-        "laravel/sanctum": "^2.11",
+        "laravel/sanctum": "^2.15",
+        "laravel/socialite": "^5.15",
         "laravel/tinker": "^2.5",
         "pharaonic/laravel-seo": "^1.1"
     },

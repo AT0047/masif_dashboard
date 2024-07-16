@@ -59,7 +59,7 @@ class OfferNotification extends Notification
         return [
             'message' => "New Offer:",
             'name' => $this->offer->name_en,
-            'url' => url('offers' . $this->offer->id),
+            'url' => url('offers/' . $this->offer->id),
         ];
     }
 }
